@@ -186,7 +186,7 @@ class XlsDocumentWrapper extends AbstractWrapper
             case 'pdf':
                 $writerType = 'PDF';
                 try {
-                    $reflectionClass = new ReflectionClass('mPDF');
+                    $reflectionClass = new ReflectionClass('Mpdf\Mpdf');
                     $path = dirname($reflectionClass->getFileName());
                     if (!PHPExcel_Settings::setPdfRenderer(PHPExcel_Settings::PDF_RENDERER_MPDF, $path)) {
                         throw new \PHPExcel_Exception();
